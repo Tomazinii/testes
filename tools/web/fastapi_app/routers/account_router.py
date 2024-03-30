@@ -80,10 +80,7 @@ async def change_password(requests: Request, input: InputChangePasswordRouteDto,
 
 @account_router.get("/verify", status_code=200)
 async def verify(requests: Request):
-    print("AQUIIIIIIIIIIIIIIIIIIII")
-    print("AQUIIIIIIIIIIIIIIIIIIII")
-    print("AQUIIIIIIIIIIIIIIIIIIII",cookie(requests))
-    print("AQUIIIIIIIIIIIIIIIIIIII")
+
     try:
         session_key = None
         if requests.cookies.get("user_cookie"):
