@@ -78,11 +78,6 @@ async def register(requests: Request, input: InputRegisterClassroomRoute):
 @classroom_router.get("/get_classroom/{teacher_id}", status_code=200)
 async def get_classroom(requests: Request, teacher_id: str):
     try:
-        print("AQUIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII get classroom")
-        print("AQUIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII get classroom")
-        print("AQUIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII get classroom",requests.cookies.get("user_cookie"))
-        print("AQUIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII get classroom")
-        print("AQUIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII get classroom")
         await authentication_middleware(requests=requests)
         response = http_adapter(controller=get_classroom_composer(), request=requests, input=teacher_id, response=None)
         return response

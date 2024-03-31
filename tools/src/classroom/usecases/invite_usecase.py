@@ -7,7 +7,7 @@ from src._shared.value_object.email import Email
 from src.account.domain.entity.invite import InviteStudent
 from src.classroom.domain.repository.classroom_repository_interface import ClassroomRepositoryInterface
 from src.classroom.usecases.invite_usecase_dto import InputInviteStudentDto
-
+from web.config import HOST
 
 class InviteStudentUsecase(UsecaseInterface):
     
@@ -30,7 +30,7 @@ class InviteStudentUsecase(UsecaseInterface):
                 )
                 invite.set_to(email=element)
 
-                link_invite = f"http://localhost:3001/invite/{invite.get_id()}/{invite.get_classroom_id()}"
+                link_invite = f"{HOST}/invite/{invite.get_id()}/{invite.get_classroom_id()}"
 
                 content = f""" 
     Hello Student,

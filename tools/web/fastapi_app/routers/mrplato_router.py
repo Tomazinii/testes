@@ -49,7 +49,7 @@ class InputGetOptionRoute(BaseModel):
 async def prover(requests: Request, input: InputProverRoute, response: Response):
 
     try:
-        # await authentication_middleware(requests=requests)
+        await authentication_middleware(requests=requests)
         session_key = None
         if requests.cookies.get("mrplato_cookie"):
             session_key = cookie(requests)
@@ -89,7 +89,7 @@ class InputCheckStatusMrplatoRouter(BaseModel):
 @mrplato_router.post("/check_status_mrplato", status_code=201)
 async def check_status_mrplato(requests: Request, input: InputCheckStatusMrplatoRouter, response: Response):
     try:
-        # await authentication_middleware(requests=requests)
+        await authentication_middleware(requests=requests)
         session_key = None
         if requests.cookies.get("mrplato_cookie"):
             session_key = cookie(requests)
@@ -114,7 +114,7 @@ async def check_status_mrplato(requests: Request, input: InputCheckStatusMrplato
 async def check_status_mrplato(requests: Request, response: Response):
     
     try:
-        # await authentication_middleware(requests=requests)
+        await authentication_middleware(requests=requests)
         session_key = None
         if requests.cookies.get("mrplato_cookie"):
             session_key = cookie(requests)
@@ -139,7 +139,7 @@ async def check_status_mrplato(requests: Request, response: Response):
 @mrplato_router.get("/restart_status_mrplato", status_code=200)
 async def restart_status_mrplato(requests: Request, response: Response):
     try:
-        # await authentication_middleware(requests=requests)
+        await authentication_middleware(requests=requests)
         session_key = None
         if requests.cookies.get("mrplato_cookie"):
             session_key = cookie(requests)
