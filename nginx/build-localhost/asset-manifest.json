@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ba6ccb46.css",
+    "main.js": "/static/js/main.ea4b2f59.js",
+    "static/media/Roboto-Medium.ttf": "/static/media/Roboto-Medium.7c8d04cd831df3033c8a.ttf",
+    "static/media/expired.jpg": "/static/media/expired.ed5718044908f9331eaf.jpg",
+    "static/media/content.png": "/static/media/content.8d5eaf2495f6d9305c87.png",
+    "static/media/practitioner.png": "/static/media/practitioner.c5b9f418a5f949fb359a.png",
+    "static/media/landing2.jpg": "/static/media/landing2.9c3e1633ae68061229e3.jpg",
+    "static/media/exercises.png": "/static/media/exercises.c1068c27ad15a4fccb2e.png",
+    "static/media/challenge.png": "/static/media/challenge.d98529adef830400fbab.png",
+    "static/media/games.png": "/static/media/games.b01d6a3ecbdd07f26b45.png",
+    "static/media/tournament.png": "/static/media/tournament.b63750769aaa23d3302b.png",
+    "static/media/Login.svg": "/static/media/Login.60e2f637c38be898a4f244ecb0385afd.svg",
+    "static/media/logo.svg": "/static/media/logo.4c613e3cf88343cb293429fdeac4b642.svg",
+    "index.html": "/index.html",
+    "main.ba6ccb46.css.map": "/static/css/main.ba6ccb46.css.map",
+    "main.ea4b2f59.js.map": "/static/js/main.ea4b2f59.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ba6ccb46.css",
+    "static/js/main.ea4b2f59.js"
+  ]
+}
