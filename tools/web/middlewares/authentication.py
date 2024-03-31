@@ -10,6 +10,11 @@ async def authentication_middleware(requests):
     session = UserSession()
     result = await session.verify(session_key=session_key)
 
+    print("middleware que funciona")
+    print("middleware que funciona")
+    print("middleware que funciona",result)
+    print("middleware que funciona",result)
+
     if result is None:
         raise UnauthorizedError("You are not logged in")
     

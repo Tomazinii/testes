@@ -6,7 +6,7 @@ from exercise_route import exercise_api_route
 from web.fastapi_app.routers import account_router, classroom_router, mrplato_router, problem_router
 # from routers.problem_router import problem_router
 
-
+from prometheus_fastapi_instrumentator import Instrumentator
 
 app = FastAPI()
 
@@ -38,6 +38,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+Instrumentator().instrument(app).expose(app)
+
 
 app.include_router(exercise_api_route, prefix="/api/v1/exercises")
 app.include_router(problem_router, prefix="/api/v1/problems")

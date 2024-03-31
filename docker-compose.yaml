@@ -8,7 +8,7 @@ services:
     build: ./tools/
     container_name: app
     image: alotropo/tools
-    command: uvicorn main:app --host 0.0.0.0 --workers 4
+    command: uvicorn main:app --host 0.0.0.0 
     networks: 
       - node-network
     volumes: 
@@ -81,6 +81,18 @@ services:
     networks:
       - node-network
 
+
+  redis:
+      image: redis:6.2-alpine
+      restart: always
+      container_name: redis
+      ports:
+        - '6379:6379'
+      command: redis-server 
+      volumes: 
+        - ./cache:/data
+      networks:
+        - node-network
 
   nginx:
     image: alotropo/nginx
